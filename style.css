@@ -1,0 +1,155 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --background: url(assets/bg-mobile.jpg);
+  --switch-img: url(assets/MoonStars.svg);
+  --border: rgba(255, 255, 255, 0.5);
+  --bg-buttons: rgba(255, 255, 255, 0.1);
+  --bg-hover: rgba(0, 0, 0, 0.05);
+  --icons-hover: rgba(255, 255, 255, 0.2);
+}
+
+.light {
+  --text-color: black;
+  --background: url(assets/bg-mobile-light.jpg);
+  --switch-img: url(assets/Sun.svg);
+  --border: rgba(0, 0, 0, 0.5);
+  --bg-buttons: rgba(0, 0, 0, 0.05);
+  --bg-hover: rgba(0, 0, 0, 0.02);
+  --icons-hover: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+
+  /*background: image repeat position/size*/
+  background: var(--background) no-repeat top center/cover;
+}
+
+body * {
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto auto;
+  padding: 0 24px;
+}
+
+/* profile */
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* switch */
+
+#switch {
+  width: 64px;
+  position: relative;
+  margin: 16px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-img) no-repeat center;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--bg-buttons);
+  border: 1px solid var(--border);
+  backdrop-filter: 4px;
+  border-radius: 9999px;
+}
+
+/* links */
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0px;
+}
+
+li a {
+  display: flex;
+  justify-content: center;
+  padding: 16px 24px;
+
+  border-radius: 8px;
+  backdrop-filter: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+
+  background: var(--bg-buttons);
+  border: 1px solid var(--border);
+}
+
+li a:hover {
+  background: var(--bg-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+  display: flex;
+  padding: 24px 0px;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  border-radius: 50%;
+  background: var(--icons-hover);
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+}
