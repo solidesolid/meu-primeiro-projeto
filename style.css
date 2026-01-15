@@ -39,6 +39,7 @@ body {
 body * {
   color: var(--text-color);
   font-family: "Inter", sans-serif;
+  height: 100vh;
 }
 
 #container {
@@ -153,4 +154,14 @@ footer {
   text-align: center;
   padding: 24px;
   font-size: 14px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --background: url(/assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --background: url(/assets/bg-desktop-light.jpg);
+  }
 }
